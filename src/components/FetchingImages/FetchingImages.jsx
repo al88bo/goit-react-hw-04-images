@@ -36,9 +36,7 @@ export const FetchingImages = ({ query, page, takePageOnClick }) => {
 
   return (
     <>
-      {(loading && page > 1) || !loading ? (
-        <ImageGallery images={images} />
-      ) : null}
+      {((loading && page > 1) || !loading) && <ImageGallery images={images} />}
       {!loading && page < totalPages && (
         <Button takePageOnClick={takePageOnClick} />
       )}
