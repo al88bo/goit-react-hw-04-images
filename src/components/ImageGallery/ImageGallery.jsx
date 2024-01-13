@@ -27,7 +27,7 @@ export const ImageGallery = ({ images }) => {
       {isModalOpen && (
         <Modal
           alt={alt}
-          largeImageURL={largeImageUrl}
+          largeImageUrl={largeImageUrl}
           setIsModalOpen={setIsModalOpen}
         />
       )}

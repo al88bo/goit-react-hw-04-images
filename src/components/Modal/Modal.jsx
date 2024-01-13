@@ -1,7 +1,7 @@
 import css from './Modal.module.css';
 import { useEffect } from 'react';
 
-export const Modal = ({ alt, modalData, setIsModalOpen }) => {
+export const Modal = ({ alt, largeImageUrl, setIsModalOpen }) => {
   useEffect(() => {
     const handlePressEsc = e => e.code === 'Escape' && setIsModalOpen(false);
     window.addEventListener('keydown', handlePressEsc);
@@ -21,7 +21,7 @@ export const Modal = ({ alt, modalData, setIsModalOpen }) => {
   return (
     <div className={css.overlay} onClick={handleOverlayClick}>
       <div className={css.modal}>
-        <img src={modalData} alt="" />
+        <img src={largeImageUrl} alt={alt} />
       </div>
     </div>
   );
